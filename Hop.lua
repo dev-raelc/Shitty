@@ -28,7 +28,7 @@ function Hop:Teleport()
         for i,v in pairs(Site.data) do
             local Possible = true
             ID = tostring(v.id)
-            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+            if tonumber(6) > tonumber(v.playing) then
                 for _,Existing in pairs(AllIDs) do
                     if num ~= 0 then
                         if ID == tostring(Existing) then
@@ -53,7 +53,7 @@ function Hop:Teleport()
                         wait()
                         game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
                     end)
-                    wait(4)
+                    wait(1)
                 end
             end
         end
